@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tell Me You - Inglês Personalizado</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ESTILOS EXCLUSIVOS DA HOME */
+        .hero-premium {
+            background: linear-gradient(135deg, #6a1b9a 0%, #4a148c 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            clip-path: ellipse(150% 100% at 50% 0%);
+            /* Curva suave no fundo */
+        }
+
+        .hero-premium h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-premium p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-cta-principal {
+            background-color: #ff4081;
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 10px 20px rgba(255, 64, 129, 0.3);
+        }
+
+        .btn-cta-principal:hover {
+            transform: translateY(-5px);
+            background-color: #f50057;
+            box-shadow: 0 15px 30px rgba(255, 64, 129, 0.4);
+        }
+
+        /* Seção de Diferenciais */
+        .features-home {
+            padding: 80px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: -50px;
+            /* Faz os cards subirem sobre o hero */
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eee;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card i {
+            font-size: 3rem;
+            color: #6a1b9a;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* Seção "Como Funciona" */
+        .how-it-works {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            gap: 30px;
+        }
+
+        .step-number {
+            background: #ff4081;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* Banner de Convite Final */
+        .final-invite {
+            background: #f3e5f5;
+            padding: 80px 0;
+            text-align: center;
+            border-radius: 30px;
+            margin: 60px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="assets/logo.jpg" alt="Tell Me You Logo">
+                <h1>Tell Me You</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="pacotes.html">Pacotes</a></li>
+                    <li><a href="depoimentos.html">Depoimentos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-premium">
+            <div class="container">
+                <h2>Fale Inglês com a confiança <br> que você sempre quis.</h2>
+                <p>Aulas particulares personalizadas, focadas na sua rotina e nos seus objetivos. Aprenda no seu ritmo,
+                    sem pressão e com resultados reais.</p>
+                <a href="pacotes.html" class="btn-cta-principal">Ver Planos e Preços</a>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="features-home">
+                <div class="feature-card">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>100% Personalizado</h3>
+                    <p>As aulas são preparadas exclusivamente para as suas necessidades e dificuldades.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Foco em Conversação</h3>
+                    <p>Perca o medo de falar desde a primeira aula com metodologias práticas.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Flexibilidade</h3>
+                    <p>Horários que se encaixam na sua agenda de trabalho ou estudos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; color: #4a148c; margin-bottom: 50px;">Seu caminho até
+                    a fluência</h2>
+
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h3>Agende uma Conversa</h3>
+                            <p>Entramos em contato para entender seu nível atual e seus objetivos.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div>
+                            <h3>Escolha seu Plano</h3>
+                            <p>Temos pacotes que cabem no seu bolso e na sua disponibilidade de tempo.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h3>Comece a Falar</h3>
+                            <p>Inicie suas aulas particulares e veja sua evolução semana após semana.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="final-invite">
+                <h2 style="color: #6a1b9a;">Pronto para destravar seu inglês?</h2>
+                <p style="margin: 20px 0 40px; font-size: 1.2rem;">Junte-se a dezenas de alunos que já transformaram
+                    suas carreiras e viagens.</p>
+                <a href="contato.html" class="btn-cta-principal" style="background-color: #6a1b9a;">Agendar Aula
+                    Experimental</a>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background-color: #4a148c; color: white; padding: 40px 0;">
+        <div class="container" style="text-align: center;">
+            <p>© 2024 Tell Me You - Todos os direitos reservados.</p>
+            <div style="margin-top: 20px;">
+                <a href="sobre.html" style="color: #ddd; margin: 0 10px;">Sobre</a>
+                <a href="pacotes.html" style="color: #ddd; margin: 0 10px;">Pacotes</a>
+                <a href="contato.html" style="color: #ddd; margin: 0 10px;">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

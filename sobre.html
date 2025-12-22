@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Tell Me You</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ESTILOS EXCLUSIVOS DA PÁGINA SOBRE */
+        .about-hero {
+            padding: 80px 0;
+            background-color: #f3e5f5;
+            overflow: hidden;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        /* Moldura moderna para a foto */
+        .teacher-image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .teacher-image-container img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 30px;
+            /* Quadrado com cantos bem arredondados é mais moderno que círculo total */
+            box-shadow: 20px 20px 0px #6a1b9a;
+            /* Efeito de moldura sólida atrás */
+            z-index: 2;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: #4a148c;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        /* Seção de Qualificações */
+        .qualifications {
+            padding: 80px 0;
+            background: white;
+            text-align: center;
+        }
+
+        .qual-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .qual-item {
+            padding: 20px;
+        }
+
+        .qual-item i {
+            font-size: 2.5rem;
+            color: #ff4081;
+            margin-bottom: 15px;
+        }
+
+        .qual-item h4 {
+            color: #6a1b9a;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .teacher-image-container {
+                margin-bottom: 40px;
+            }
+
+            .teacher-image-container img {
+                box-shadow: 10px 10px 0px #6a1b9a;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="assets/logo.jpg" alt="Tell Me You Logo">
+                <h1>Tell Me You</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="pacotes.html">Pacotes</a></li>
+                    <li><a href="depoimentos.html">Depoimentos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="teacher-image-container">
+                        <img src="assets/professora-rachel.jpg" alt="Rachel - Professora de Inglês">
+                    </div>
+
+                    <div class="about-text">
+                        <span
+                            style="color: #ff4081; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">Conheça
+                            sua Teacher</span>
+                        <h2>Rachel - Fundadora da Tell Me You</h2>
+                        <p>Acredito que aprender inglês não precisa ser um fardo, mas sim uma ponte para novas
+                            oportunidades. Com anos de experiência no ensino personalizado, fundei a <strong>Tell Me
+                                You</strong> para oferecer o que as escolas tradicionais não conseguem: atenção
+                            individualizada e foco no que realmente importa para você.</p>
+                        <p>Minha missão é ajudar você a destravar sua fala, seja para aquela reunião importante, para
+                            uma viagem dos sonhos ou para o seu crescimento pessoal. Aqui, você não é apenas mais um
+                            aluno em uma lista; você é o protagonista da sua própria evolução.</p>
+                        <a href="contato.html" class="btn-cta-principal"
+                            style="background-color: #6a1b9a; padding: 12px 30px; text-decoration: none; color: white; border-radius: 50px; font-weight: bold;">Fale
+                            Comigo no WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="qualifications">
+            <div class="container">
+                <h3 style="font-size: 2rem; color: #4a148c;">Por que escolher a Tell Me You?</h3>
+                <div class="qual-grid">
+                    <div class="qual-item">
+                        <i class="fas fa-certificate"></i>
+                        <h4>Metodologia Própria</h4>
+                        <p>Conteúdo adaptado ao seu nível e área de atuação.</p>
+                    </div>
+                    <div class="qual-item">
+                        <i class="fas fa-users"></i>
+                        <h4>Aulas Humanizadas</h4>
+                        <p>Um ambiente seguro para você errar, aprender e evoluir.</p>
+                    </div>
+                    <div class="qual-item">
+                        <i class="fas fa-laptop-house"></i>
+                        <h4>Conforto Online</h4>
+                        <p>Aulas dinâmicas no conforto da sua casa ou escritório.</p>
+                    </div>
+                    <div class="qual-item">
+                        <i class="fas fa-bullseye"></i>
+                        <h4>Foco no Resultado</h4>
+                        <p>Planejamento estratégico para você alcançar a fluência rápido.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background-color: #4a148c; color: white; padding: 40px 0;">
+        <div class="container" style="text-align: center;">
+            <p>© 2024 Tell Me You - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

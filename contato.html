@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Tell Me You</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ESTILIZAÇÃO DA PÁGINA DE CONTATO */
+        .contact-page {
+            background-color: #f0f2f5;
+            padding: 60px 0;
+            min-height: 80vh;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            /* Duas colunas */
+            gap: 0;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+
+        /* Coluna da Esquerda - Info */
+        .contact-info-sidebar {
+            background-color: #6a1b9a;
+            color: white;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-info-sidebar h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info-sidebar p {
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .info-item i {
+            margin-right: 20px;
+            font-size: 1.5rem;
+            color: #ff4081;
+            /* Rosa para destaque */
+        }
+
+        /* Coluna da Direita - Formulário */
+        .contact-form-area {
+            padding: 50px;
+            background: white;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #6a1b9a;
+        }
+
+        .btn-submit {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            background-color: #e91e63;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 64, 129, 0.3);
+        }
+
+        /* Responsividade para celulares */
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info-sidebar {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="assets/logo.jpg" alt="Tell Me You Logo">
+                <h1>Tell Me You</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="pacotes.html">Pacotes</a></li>
+                    <li><a href="depoimentos.html">Depoimentos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-page">
+        <div class="container">
+            <div class="contact-wrapper">
+
+                <div class="contact-info-sidebar">
+                    <h2>Vamos Conversar?</h2>
+                    <p>Tire suas dúvidas ou agende uma aula experimental gratuita agora mesmo.</p>
+
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>(21) 99877-6230</span>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>rachelfdrj90@gmail.com</span>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Del Castilho, Rio de Janeiro - RJ</span>
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <p>Siga-nos:</p>
+                        <div style="display: flex; gap: 20px; font-size: 1.5rem;">
+                            <a href="#" style="color: white;"><i class="fab fa-instagram"></i></a>
+                            <a href="#" style="color: white;"><i class="fab fa-facebook"></i></a>
+                            <a href="#" style="color: white;"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-area">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>Seu Nome Completo</label>
+                            <input type="text" placeholder="Ex: Maria Silva" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>E-mail de Contato</label>
+                            <input type="email" placeholder="email@exemplo.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Qual plano você tem interesse?</label>
+                            <select>
+                                <option value="nenhum">Ainda estou decidindo</option>
+                                <option value="essencial">Plano Essencial</option>
+                                <option value="intensivo">Plano Intensivo</option>
+                                <option value="business">Plano Business</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Sua Mensagem</label>
+                            <textarea rows="5" placeholder="Conte-me um pouco sobre seus objetivos com o inglês..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer style="background-color: #4a148c; color: white; padding: 30px 0;">
+        <div class="container" style="text-align: center;">
+            <p>© 2024 Tell Me You - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
