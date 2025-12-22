@@ -69,7 +69,7 @@
             border-radius: 10px;
             font-size: 1rem;
             outline: none;
-            box-sizing: border-box; /* Evita que o input saia da caixa */
+            box-sizing: border-box;
         }
 
         .form-group input:focus, .form-group textarea:focus { border-color: #6a1b9a; }
@@ -114,14 +114,10 @@
             transition: all 0.3s ease;
         }
 
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            background-color: #128c7e;
-        }
-
         @media (max-width: 768px) {
             .contact-wrapper { grid-template-columns: 1fr; }
-            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 25px; }
+            .contact-info-sidebar { padding: 30px; }
+            .whatsapp-float { bottom: 20px; right: 20px; }
         }
     </style>
 </head>
@@ -129,7 +125,7 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="assets/logo.png" alt="Tell Me You Logo">
+                <img src="assets/logo.jpg" alt="Tell Me You Logo">
                 <h1>Tell Me You</h1>
             </div>
             <nav>
@@ -165,32 +161,34 @@
 
                 <div class="contact-form-area">
                     <form action="https://formspree.io/f/mqaaovde" method="POST">
+                        
                         <div class="form-group">
                             <label>Seu Nome Completo</label>
-                            <input type="text" name="nome" placeholder="Ex: Maria Silva" required>
+                            <input type="text" name="name" placeholder="Ex: Maria Silva" required>
                         </div>
                         
                         <div class="form-group">
                             <label>E-mail de Contato</label>
-                            <input type="email" name="_replyto" placeholder="email@exemplo.com" required>
+                            <input type="email" name="email" placeholder="email@exemplo.com" required>
                         </div>
 
                         <div class="form-group">
                             <label>Qual plano você tem interesse?</label>
-                            <select name="plano">
-                                <option value="nenhum">Ainda estou decidindo</option>
-                                <option value="essencial">Plano Essencial</option>
-                                <option value="intensivo">Plano Intensivo</option>
-                                <option value="business">Plano Business</option>
+                            <select name="plan">
+                                <option value="Indefinido">Ainda estou decidindo</option>
+                                <option value="Essencial">Plano Essencial</option>
+                                <option value="Intensivo">Plano Intensivo</option>
+                                <option value="Business">Plano Business</option>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label>Sua Mensagem</label>
-                            <textarea name="mensagem" rows="5" placeholder="Olá Rachel, gostaria de saber mais sobre..." required></textarea>
+                            <textarea name="message" rows="5" placeholder="Olá Rachel, gostaria de saber mais..." required></textarea>
                         </div>
 
-                        <input type="hidden" name="_subject" value="Novo contato do site Tell Me You!">
+                        <input type="hidden" name="_subject" value="Novo Contato do Site Tell Me You">
+                        <input type="hidden" name="_next" value="https://seunome.github.io/tell-me-you/obrigado.html">
 
                         <button type="submit" class="btn-submit">Enviar Mensagem</button>
                     </form>
@@ -199,7 +197,7 @@
         </div>
     </main>
 
-    <a href="https://wa.me/5521998776230?text=Olá!%20Vi%20o%20seu%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20as%20aulas." class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5521998776230?text=Olá!%20Vi%20o%20seu%20site%20e%20gostaria%20de%20mais%20informações." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
