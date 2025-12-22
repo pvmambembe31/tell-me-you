@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* ESTILIZAÇÃO DA PÁGINA DE CONTATO */
+        /* Estilos da Página de Contato */
         .contact-page {
             background-color: #f0f2f5;
             padding: 60px 0;
@@ -17,12 +17,13 @@
         .contact-wrapper {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
-            gap: 0;
             background: white;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 20px 50px rgba(0,0,0,0.1);
             border: 1px solid #ddd;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         .contact-info-sidebar {
@@ -34,7 +35,7 @@
             justify-content: center;
         }
 
-        .contact-info-sidebar h2 { font-size: 2rem; margin-bottom: 20px; }
+        .contact-info-sidebar h2 { font-size: 2rem; margin-bottom: 20px; color: white; }
 
         .info-item {
             display: flex;
@@ -51,7 +52,7 @@
 
         .contact-form-area { padding: 50px; background: white; }
 
-        .form-group { margin-bottom: 20px; }
+        .form-group { margin-bottom: 20px; text-align: left; }
 
         .form-group label {
             display: block;
@@ -61,7 +62,7 @@
         }
 
         .form-group input, 
-        .form-group textarea,
+        .form-group textarea, 
         .form-group select {
             width: 100%;
             padding: 12px 15px;
@@ -83,8 +84,8 @@
             font-size: 1.1rem;
             font-weight: bold;
             cursor: pointer;
-            transition: all 0.3s ease;
             width: 100%;
+            transition: 0.3s;
         }
 
         .btn-submit:hover {
@@ -93,7 +94,7 @@
             box-shadow: 0 10px 20px rgba(255, 64, 129, 0.3);
         }
 
-        /* BOTÃO FLUTUANTE WHATSAPP */
+        /* Botão WhatsApp Flutuante */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -111,11 +112,10 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            transition: all 0.3s ease;
         }
 
         @media (max-width: 768px) {
-            .contact-wrapper { grid-template-columns: 1fr; }
+            .contact-wrapper { grid-template-columns: 1fr; margin: 0 15px; }
             .contact-info-sidebar { padding: 30px; }
             .whatsapp-float { bottom: 20px; right: 20px; }
         }
@@ -146,7 +146,7 @@
                 
                 <div class="contact-info-sidebar">
                     <h2>Vamos Conversar?</h2>
-                    <p>Tire suas dúvidas ou agende uma aula experimental gratuita.</p>
+                    <p>Tire suas dúvidas ou agende uma aula experimental gratuita agora mesmo.</p>
                     
                     <div class="info-item">
                         <i class="fab fa-whatsapp"></i>
@@ -160,8 +160,7 @@
                 </div>
 
                 <div class="contact-form-area">
-                    <form action="https://formspree.io/f/mqaaovde" method="POST">
-                        
+                    <form action="https://formspree.io/f/mqadgavo" method="POST">
                         <div class="form-group">
                             <label>Seu Nome Completo</label>
                             <input type="text" name="name" placeholder="Ex: Maria Silva" required>
@@ -184,15 +183,13 @@
 
                         <div class="form-group">
                             <label>Sua Mensagem</label>
-                            <textarea name="message" rows="5" placeholder="Olá Rachel, gostaria de saber mais..." required></textarea>
+                            <textarea name="message" rows="5" placeholder="Olá Rachel, gostaria de saber mais sobre..." required></textarea>
                         </div>
-
-                        <input type="hidden" name="_subject" value="Novo Contato do Site Tell Me You">
-                        <input type="hidden" name="_next" value="https://seunome.github.io/tell-me-you/obrigado.html">
 
                         <button type="submit" class="btn-submit">Enviar Mensagem</button>
                     </form>
                 </div>
+
             </div>
         </div>
     </main>
@@ -201,7 +198,7 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <footer style="background-color: #4a148c; color: white; padding: 30px 0;">
+    <footer style="background-color: #4a148c; color: white; padding: 40px 0; margin-top: 50px;">
         <div class="container" style="text-align: center;">
             <p>© 2024 Tell Me You - Todos os direitos reservados.</p>
         </div>
