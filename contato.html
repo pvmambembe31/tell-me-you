@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Estilos da Página */
         .contact-page { background-color: #f0f2f5; padding: 60px 0; min-height: 80vh; }
         .contact-wrapper { display: grid; grid-template-columns: 1fr 1.5fr; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1); border: 1px solid #ddd; max-width: 1100px; margin: 0 auto; }
         .contact-info-sidebar { background-color: #6a1b9a; color: white; padding: 50px; display: flex; flex-direction: column; justify-content: center; }
@@ -19,33 +18,11 @@
         .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #444; }
         .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px 15px; border: 2px solid #eee; border-radius: 10px; font-size: 1rem; outline: none; box-sizing: border-box; }
         .btn-submit { background-color: #ff4081; color: white; border: none; padding: 15px 30px; border-radius: 10px; font-size: 1.1rem; font-weight: bold; cursor: pointer; width: 100%; transition: 0.3s; }
-        .btn-submit:hover { background-color: #e91e63; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 64, 129, 0.3); }
+        .btn-submit:hover { background-color: #e91e63; transform: translateY(-3px); }
 
-        /* ESTILO DO BOTÃO DO WHATSAPP */
-        .whatsapp-link {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            right: 40px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
-        .whatsapp-link:hover {
-            transform: scale(1.1);
-            background-color: #128c7e;
-        }
-
+        /* Botão WhatsApp */
+        .whatsapp-link { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 1px 1px 10px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+        
         @media (max-width: 768px) {
             .contact-wrapper { grid-template-columns: 1fr; margin: 0 15px; }
             .whatsapp-link { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 25px; }
@@ -76,7 +53,7 @@
             <div class="contact-wrapper">
                 <div class="contact-info-sidebar">
                     <h2>Vamos Conversar?</h2>
-                    <p>Tire suas dúvidas ou agende uma aula experimental gratuita agora mesmo.</p>
+                    <p>Tire suas dúvidas ou agende uma aula experimental gratuita.</p>
                     <div class="info-item"><i class="fab fa-whatsapp"></i><span>(21) 99877-6230</span></div>
                     <div class="info-item"><i class="fas fa-envelope"></i><span>rachelfdrj90@gmail.com</span></div>
                 </div>
@@ -85,16 +62,29 @@
                     <form action="https://formspree.io/f/mqadgavo" method="POST">
                         <div class="form-group">
                             <label>Seu Nome Completo</label>
-                            <input type="text" name="name" required>
+                            <input type="text" name="name" placeholder="Ex: Maria Silva" required>
                         </div>
+                        
                         <div class="form-group">
                             <label>E-mail de Contato</label>
-                            <input type="email" name="email" required>
+                            <input type="email" name="email" placeholder="email@exemplo.com" required>
                         </div>
+
                         <div class="form-group">
-                            <label>Mensagem</label>
-                            <textarea name="message" rows="5" required></textarea>
+                            <label>Qual plano você tem interesse?</label>
+                            <select name="plan">
+                                <option value="Nao decidido">Ainda estou decidindo</option>
+                                <option value="Essencial">Plano Essencial</option>
+                                <option value="Intensivo">Plano Intensivo</option>
+                                <option value="Business">Plano Business</option>
+                            </select>
                         </div>
+
+                        <div class="form-group">
+                            <label>Sua Mensagem</label>
+                            <textarea name="message" rows="5" placeholder="Olá Rachel..." required></textarea>
+                        </div>
+
                         <button type="submit" class="btn-submit">Enviar Mensagem</button>
                     </form>
                 </div>
