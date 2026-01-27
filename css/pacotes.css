@@ -1,160 +1,147 @@
-/* pacotes.css */
+/* pacotes.css - CORRIGIDO */
 
-.pacotes {
-    padding: 4rem 2rem;
-    background-color: #f0f2f5;
+/* Estilos da Página */
+.packages-page {
+    padding: 60px 0;
+    background-color: #f3e5f5;
+}
+
+.section-subtitle {
     text-align: center;
+    max-width: 600px;
+    margin: -30px auto 50px;
+    color: #555;
+    font-size: 1.1rem;
 }
 
-.pacotes h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 3rem;
-}
-
-.cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+/* GRID PRINCIPAL (Restaura o tamanho correto dos cards) */
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.card {
-    background: #fff;
-    border-radius: 15px;
-    padding: 2rem;
-    width: 300px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+/* CARD MATERIAL (Restaura o estilo do cartão) */
+.package-card-material {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    /* Necessário para posicionar o badge */
+    /* O SEGREDO DO ENQUADRAMENTO: */
+    overflow: hidden !important;
+    /* Corta o que passar da borda (corrige o badge) */
+    padding: 0 0 20px 0;
+    /* Ajuste para o conteúdo não colar */
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.package-card-material:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Estilo específico para o card de destaque (Intensivo) */
-.card.destaque {
-    border: 2px solid #6a0dad;
-    /* Borda roxa para destacar */
-    transform: scale(1.05);
-    /* Levemente maior */
-    z-index: 1;
+/* Conteúdo Interno (Títulos, Preços, Listas) */
+.package-header {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-.card.destaque:hover {
-    transform: scale(1.05) translateY(-10px);
-}
-
-/* Badge "O MAIS ESCOLHIDO" - CORRIGIDO */
-.badge {
-    position: absolute;
-    top: -15px;
-    /* Ajustado para não sair muito para cima */
-    right: -10px;
-    /* Ajustado para não sair muito para a direita */
-    background-color: #ff4081;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 5px;
-    /* Bordas levemente arredondadas, estilo etiqueta */
-    font-size: 0.8rem;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transform: rotate(15deg);
-    /* Rotação leve para dar estilo */
-    z-index: 10;
-}
-
-.card h3 {
-    font-size: 1.5rem;
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-.price {
-    font-size: 3rem;
-    font-weight: 800;
+.package-title {
+    font-size: 1.4rem;
     color: #333;
-    margin-bottom: 2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
-.price span {
-    font-size: 1rem;
+.package-price {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #6a1b9a;
+    margin: 10px 0;
+}
+
+.price-period {
+    font-size: 0.9rem;
     color: #888;
     font-weight: normal;
 }
 
-.features {
+.package-features {
     list-style: none;
-    text-align: left;
-    margin-bottom: 2rem;
+    padding: 20px;
+    margin: 0;
+    flex-grow: 1;
 }
 
-.features li {
-    margin-bottom: 1rem;
+.package-features li {
+    padding: 8px 0;
     color: #555;
     display: flex;
     align-items: center;
+    font-size: 0.95rem;
 }
 
-.features i {
-    color: #4caf50;
-    /* Cor do ícone de check */
+.package-features li i {
     margin-right: 10px;
 }
 
-/* Ícones específicos para o plano Business */
-.card:last-child .features i {
-    color: #03a9f4;
-    /* Azul para Business */
+.package-footer {
+    padding: 0 20px;
+    margin-top: auto;
 }
 
-/* Ícones específicos para o plano Intensivo (Estrelas) */
-.card.destaque .features i {
-    color: #ffc107;
-    /* Amarelo ouro */
-}
-
-.btn-card {
-    display: inline-block;
-    padding: 12px 30px;
+/* Botão */
+.btn-package {
+    display: block;
+    width: 100%;
     background-color: #ff4081;
-    color: #fff;
+    color: white;
+    padding: 12px 0;
+    border-radius: 30px;
     text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: background 0.3s;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    text-align: center;
 }
 
-.btn-card:hover {
+.btn-package:hover {
     background-color: #e91e63;
 }
 
-/* Botão diferente para o card de destaque */
-.card.destaque .btn-card {
-    background-color: #6a0dad;
+/* --- CORREÇÃO DO BADGE (O MAIS ESCOLHIDO) --- */
+
+.package-card-material.popular {
+    border: 2px solid #6a1b9a;
+    /* Borda roxa do destaque */
 }
 
-.card.destaque .btn-card:hover {
-    background-color: #5a0b9e;
+.popular-badge {
+    position: absolute;
+    top: 20px;
+    /* Distância do topo */
+    right: -32px;
+    /* Puxa para a direita para criar o efeito de faixa */
+    background-color: #ff4081;
+    color: white;
+    padding: 5px 40px;
+    /* Largura da faixa */
+    font-size: 0.75rem;
+    font-weight: 700;
+    transform: rotate(45deg);
+    /* Gira 45 graus */
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
 
-@media (max-width: 768px) {
-    .cards-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card.destaque {
-        transform: scale(1);
-        /* Remove o zoom no mobile */
-        margin: 20px 0;
-    }
+/* Estilo para a versão Free/Experimental */
+.package-card-material.free-tier {
+    background-color: #fafafa;
+    border: 1px solid #eee;
 }
