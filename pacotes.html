@@ -9,15 +9,6 @@
     <link rel="stylesheet" href="css/pacotes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* GARANTIA DE LAYOUT LADO A LADO */
-        .packages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
         /* ESTILOS DE ENQUADRAMENTO E CONTORNO */
 
         .packages-header-top {
@@ -27,38 +18,44 @@
             margin-bottom: 50px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             border: 1px solid #e0e0e0;
+            /* Contorno fino no cabeçalho também */
         }
 
         .package-card-material {
-            overflow: hidden;
-            /* CORREÇÃO: Isso segura a etiqueta dentro do card */
+            overflow: visible !important;
             position: relative;
             background: white;
             border-radius: 20px;
-            min-height: auto;
-            height: 100%;
-            /* Ajuste para não ficar gigante verticalmente */
+            /* Cantos mais arredondados e modernos */
+            min-height: 600px;
             display: flex;
             flex-direction: column;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            /* CONTORNO FINO E SEPARAÇÃO */
             border: 1px solid #d1d1d1;
+            /* Contorno fino para separar do fundo */
             padding: 10px;
+            /* Respiro extra entre a borda e o conteúdo interno */
         }
 
         .package-card-material:hover {
             transform: translateY(-15px) scale(1.02);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
             border-color: #6a1b9a;
+            /* O contorno muda de cor no foco */
             z-index: 5;
         }
 
         .package-header {
             padding: 45px 25px;
+            /* Aumentei o enquadramento interno */
             text-align: center;
             border-radius: 15px 15px 0 0;
             margin-bottom: 10px;
         }
 
+        /* TEXTOS DOS PREÇOS BEM NÍTIDOS */
         .package-price {
             color: #222 !important;
             font-size: 2.8rem !important;
@@ -79,8 +76,10 @@
             font-weight: 600;
         }
 
+        /* LISTA DE RECURSOS - MELHOR ENQUADRAMENTO */
         .package-features {
             padding: 20px 30px;
+            /* Garante que o texto não encoste nas bordas */
             list-style: none;
             flex-grow: 1;
         }
@@ -90,24 +89,27 @@
             font-weight: 500;
             margin-bottom: 20px;
             line-height: 1.4;
+            /* Melhora a leitura */
         }
 
-        /* CORREÇÃO DO BADGE PARA FICAR PERFEITO NO CANTO */
+        /* CORREÇÃO DO POSICIONAMENTO DO BADGE PARA FICAR COMO UM ADESIVO NO CANTO */
         .popular-badge {
             position: absolute;
-            top: 25px;
-            right: -35px;
+            top: 15px;
+            /* Ajustado para ficar dentro do card */
+            right: 15px;
+            /* Ajustado para ficar no canto direito */
             background: #ff4081;
             color: white;
-            width: 150px;
-            text-align: center;
-            padding: 5px 0;
+            padding: 8px 15px;
+            /* Leve ajuste no padding para ficar mais compacto */
+            border-radius: 8px;
             font-size: 0.8rem;
+            /* Leve ajuste no tamanho da fonte */
             font-weight: bold;
-            transform: rotate(45deg);
             z-index: 10;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            text-transform: uppercase;
+            /* Sombra mais suave para parecer um adesivo colado */
         }
 
         .package-footer {
