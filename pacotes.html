@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/pacotes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* GARANTIA DE LAYOUT: Grid responsivo e organizado */
+        /* Mantivemos o CSS interno original para garantir o layout específico desta página */
         .packages-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -18,7 +18,6 @@
             margin: 0 auto;
         }
 
-        /* ESTILOS DE ENQUADRAMENTO E CONTORNO */
         .packages-header-top {
             background: rgba(255, 255, 255, 0.95);
             padding: 40px;
@@ -30,7 +29,6 @@
 
         .package-card-material {
             overflow: hidden;
-            /* Mantém tudo organizado dentro do card */
             position: relative;
             background: white;
             border-radius: 20px;
@@ -90,41 +88,26 @@
             line-height: 1.4;
         }
 
-        /* --- NOVO ESTILO: SELO CIRCULAR --- */
         .popular-badge {
             position: absolute;
             top: 15px;
-            /* Distância do topo */
             right: 15px;
-            /* Distância da direita */
-
-            /* Dimensões fixas para formar o círculo perfeito */
             width: 85px;
             height: 85px;
             border-radius: 50%;
-            /* Transforma o quadrado em círculo */
-
             background: #ff4081;
             color: white;
-
-            /* Centralização do texto */
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-
             font-size: 0.7rem;
             font-weight: 800;
             line-height: 1.2;
             text-transform: uppercase;
-
-            /* Visual "Adesivo" */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            /* Sombra para dar relevo */
             border: 3px solid white;
-            /* Borda branca para destacar do fundo */
             transform: rotate(15deg);
-            /* Leve inclinação charmosa */
             z-index: 10;
         }
 
@@ -158,26 +141,25 @@
         <div class="container">
             <div class="packages-header-top" style="text-align: center;">
                 <h2 style="font-size: 2.8rem; color: #4a148c; margin-bottom: 10px;">Nossos Planos</h2>
-                <p style="font-size: 1.2rem; color: #333;">Invista no seu futuro com quem entende de ensino
-                    personalizado.</p>
+                <p style="font-size: 1.2rem; color: #333;">Escolha o formato ideal para a sua jornada.</p>
             </div>
 
             <div class="packages-grid">
 
                 <div class="package-card-material">
                     <div class="package-header" style="background-color: #f8f9fa; border-radius: 12px;">
-                        <h3 class="package-title" style="color: #555;">Essencial</h3>
-                        <div class="package-price">R$ 290<span class="price-period">/mês</span></div>
+                        <h3 class="package-title" style="color: #555;">Connection</h3>
+                        <div class="package-price">R$ 376<span class="price-period">/mês</span></div>
                     </div>
                     <ul class="package-features">
-                        <li><i class="fas fa-check-circle" style="color: #4caf50; margin-right: 12px;"></i> 1 aula
-                            particular semanal</li>
-                        <li><i class="fas fa-check-circle" style="color: #4caf50; margin-right: 12px;"></i> Material
-                            digital incluso</li>
-                        <li><i class="fas fa-check-circle" style="color: #4caf50; margin-right: 12px;"></i> Foco em
-                            conversação</li>
-                        <li><i class="fas fa-check-circle" style="color: #4caf50; margin-right: 12px;"></i> Suporte via
-                            WhatsApp</li>
+                        <li><i class="fas fa-calendar-alt" style="color: #4caf50; margin-right: 12px;"></i> Pacote de 8
+                            Aulas Mensais</li>
+                        <li><i class="fas fa-users" style="color: #4caf50; margin-right: 12px;"></i> Turmas Reduzidas
+                            (Networking)</li>
+                        <li><i class="fas fa-comments" style="color: #4caf50; margin-right: 12px;"></i> Foco total em
+                            Conversação</li>
+                        <li><i class="fas fa-user-friends" style="color: #e91e63; margin-right: 12px;"></i>
+                            <strong>Traga um amigo: R$ 320 cada</strong></li>
                     </ul>
                     <div class="package-footer">
                         <a href="contato.html" class="btn-package">Começar Agora</a>
@@ -185,45 +167,46 @@
                 </div>
 
                 <div class="package-card-material" style="border: 2px solid #6a1b9a;">
-                    <div class="popular-badge">O MAIS<br>ESCOLHIDO</div>
+                    <div class="popular-badge">O MAIS<br>PEDIDO</div>
 
                     <div class="package-header" style="background-color: #f3e5f5; border-radius: 12px;">
-                        <h3 class="package-title" style="color: #4a148c;">Intensivo</h3>
-                        <div class="package-price intensivo-price">R$ 450<span class="price-period">/mês</span></div>
+                        <h3 class="package-title" style="color: #4a148c;">Boost</h3>
+                        <div class="package-price intensivo-price">R$ 376<span class="price-period">/1º mês*</span>
+                        </div>
                     </div>
                     <ul class="package-features">
-                        <li><i class="fas fa-star" style="color: #ffc107; margin-right: 12px;"></i> 2 aulas particulares
-                            semanais</li>
-                        <li><i class="fas fa-star" style="color: #ffc107; margin-right: 12px;"></i> Material
-                            personalizado</li>
-                        <li><i class="fas fa-star" style="color: #ffc107; margin-right: 12px;"></i> Preparação para
-                            viagens</li>
-                        <li><i class="fas fa-star" style="color: #ffc107; margin-right: 12px;"></i> Suporte prioritário
-                            24h</li>
+                        <li><i class="fas fa-chalkboard-teacher" style="color: #ffc107; margin-right: 12px;"></i> 8
+                            Aulas Particulares (2x/sem)</li>
+                        <li><i class="fas fa-tag" style="color: #ffc107; margin-right: 12px;"></i> <em>Promoção:</em> De
+                            R$ 400 por R$ 376</li>
+                        <li><i class="fas fa-list-ol" style="color: #ffc107; margin-right: 12px;"></i> Cronograma 100%
+                            Personalizado</li>
+                        <li><i class="fas fa-rocket" style="color: #ffc107; margin-right: 12px;"></i> Evolução Acelerada
+                            e Suporte</li>
                     </ul>
                     <div class="package-footer">
                         <a href="contato.html" class="btn-package"
-                            style="background-color: #6a1b9a; padding: 15px 30px;">Garantir minha vaga</a>
+                            style="background-color: #6a1b9a; padding: 15px 30px;">Garantir Promoção</a>
                     </div>
                 </div>
 
                 <div class="package-card-material">
                     <div class="package-header" style="background-color: #f8f9fa; border-radius: 12px;">
-                        <h3 class="package-title" style="color: #555;">Business</h3>
-                        <div class="package-price">R$ 580<span class="price-period">/mês</span></div>
+                        <h3 class="package-title" style="color: #555;">Flex Pass</h3>
+                        <div class="package-price">R$ 70<span class="price-period">/hora</span></div>
                     </div>
                     <ul class="package-features">
-                        <li><i class="fas fa-briefcase" style="color: #03a9f4; margin-right: 12px;"></i> Focado em
-                            reuniões</li>
-                        <li><i class="fas fa-briefcase" style="color: #03a9f4; margin-right: 12px;"></i> Simulação de
-                            entrevistas</li>
-                        <li><i class="fas fa-briefcase" style="color: #03a9f4; margin-right: 12px;"></i> Vocabulário
-                            corporativo</li>
-                        <li><i class="fas fa-briefcase" style="color: #03a9f4; margin-right: 12px;"></i> Horários
-                            flexíveis</li>
+                        <li><i class="fas fa-ticket-alt" style="color: #03a9f4; margin-right: 12px;"></i> Contratação
+                            por Aula Avulsa</li>
+                        <li><i class="fas fa-unlock" style="color: #03a9f4; margin-right: 12px;"></i> Sem mensalidade ou
+                            fidelidade</li>
+                        <li><i class="fas fa-bullseye" style="color: #03a9f4; margin-right: 12px;"></i> Foco:
+                            Entrevistas ou Viagem</li>
+                        <li><i class="fas fa-calendar-check" style="color: #03a9f4; margin-right: 12px;"></i> Consulte
+                            disponibilidade de agenda</li>
                     </ul>
                     <div class="package-footer">
-                        <a href="contato.html" class="btn-package">Falar com Consultor</a>
+                        <a href="contato.html" class="btn-package">Consultar Agenda</a>
                     </div>
                 </div>
 
